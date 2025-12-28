@@ -695,7 +695,6 @@ struct Solution {
 };
 
 int main() {
-  //freopen("input.txt", "r", stdin);
   cin.tie(0)->sync_with_stdio(0);
 
   cin >> n >> k;
@@ -723,6 +722,7 @@ int main() {
   best.ls(TL - el(), SL, TRIES);
 
   while (el() < TL) {
+  	cerr << best.O.mx << "\n";
     db rem = TL - el();
     if (rem <= 0) break;
     Sol s = greedy();
